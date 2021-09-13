@@ -1,14 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
+import { TodoWithoutStoreComponent } from './todo-without-store/todo-without-store.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoWithoutStoreComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatListModule,
+    MatDividerModule,
+    MatSlideToggleModule,
+    MatIconModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
