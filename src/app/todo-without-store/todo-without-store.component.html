@@ -1,9 +1,13 @@
-<form [formGroup]="taskForm" (ngSubmit)="addTask">
-<mat-form-field>
-    <input type="text" id="text" name="text" class="form-control"
-      required minlength="4">
-</mat-form-field>
-<button mat-raised-button color="primary">Add</button>
+<form [formGroup]="taskForm" (ngSubmit)="addTask()">
+        <mat-form-field class="example-full-width" appearance="fill">
+        <input formControlName="text"
+                   placeholder="Ajouter Task"
+                   matNativeControl minlength="4"
+                   required
+                   type="text">
+                <mat-hint>Errors appear instantly!</mat-hint>
+        </mat-form-field>
+    <button mat-button color="primary">Add</button>
 </form>
 <mat-card *ngIf="tasks.length > 0">
     <mat-list>

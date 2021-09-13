@@ -19,20 +19,22 @@ export class TodoWithoutStoreComponent implements OnInit{
 
   ngOnInit(): void {
   this.buildForm();
+
   }
 
   buildForm() {
     this.taskForm = this.fb.group({
-      text: [null, Validators.required]
+      text: ""
   })
 }
 
    addTask() {
       if (this.taskForm?.invalid) return ;
      this.tasks.push({
-       text: this.taskForm.value,
+       text: this.taskForm.value.text,
        toggle: false
      });
+     this.taskForm.reset();
    }
 
    removeTask(task) {
@@ -41,6 +43,7 @@ export class TodoWithoutStoreComponent implements OnInit{
   toggle(task) {
     task.done = !task.done;
   }
+
 
 
 }

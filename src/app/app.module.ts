@@ -8,6 +8,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { TodoWithoutStoreComponent } from './todo-without-store/todo-without-store.component';
@@ -27,7 +29,9 @@ import { TodoWithoutStoreComponent } from './todo-without-store/todo-without-sto
     MatListModule,
     MatDividerModule,
     MatSlideToggleModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule
 
 
   ],
